@@ -10,13 +10,13 @@
 
         <variable
             name="viewModel"
-            type="com.vishal.androidboilerplater.ui.login.LoginViewModel" />
+            type="com.vishal.androidboilerplater.ui.authentication.login.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.login.LoginActivity">
+        tools:context=".ui.authentication.login.LoginActivity">
 
         <include
             android:id="@+id/incToolbar"
@@ -51,20 +51,20 @@
             android:id="@+id/emailInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/login_horizontal_margin"
+            android:layout_marginHorizontal="@dimen/margin_30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/logoVerticalSpace">
 
             <androidx.appcompat.widget.AppCompatEditText
+                style="@style/EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:enabled="@{viewModel.isLoading ? false :true }"
                 android:hint="@string/prompt_email"
                 android:inputType="textEmailAddress"
-                android:text="@={viewModel.email}"
-                android:textSize="@dimen/edit_text_size" />
+                android:text="@={viewModel.email}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,34 +73,32 @@
             android:id="@+id/passwordInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/login_horizontal_margin"
+            android:layout_marginHorizontal="@dimen/margin_30dp"
             android:layout_marginVertical="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/emailInputLayout">
 
             <androidx.appcompat.widget.AppCompatEditText
+                style="@style/EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:enabled="@{viewModel.isLoading ? false :true }"
                 android:hint="@string/prompt_password"
                 android:inputType="numberPassword"
-                android:text="@={viewModel.password}"
-                android:textSize="@dimen/edit_text_size" />
+                android:text="@={viewModel.password}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnLogin"
-            style="@style/Base.Widget.AppCompat.Button.Colored"
+            style="@style/Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/login_horizontal_margin"
+            android:layout_marginHorizontal="@dimen/margin_30dp"
             android:layout_marginVertical="30dp"
-            android:stateListAnimator="@null"
             android:text="@string/login"
-            android:textSize="@dimen/button_size"
             app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout" />
 
 

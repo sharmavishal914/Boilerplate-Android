@@ -1,4 +1,4 @@
-package com.vishal.androidboilerplater.ui.login
+package com.vishal.androidboilerplater.ui.authentication.login
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.vishal.androidboilerplater.data.ApiResult
 import com.vishal.androidboilerplater.data.local.SessionManager
 import com.vishal.androidboilerplater.data.remote.RequestInterface
-import com.vishal.androidboilerplater.ui.login.model.LoginResult
+import com.vishal.androidboilerplater.ui.authentication.login.model.LoginResult
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.observers.DisposableObserver
 import io.reactivex.schedulers.Schedulers

@@ -1,5 +1,13 @@
 <resources>
-    <dimen name="login_horizontal_margin">30sp</dimen>
-    <dimen name="edit_text_size">16sp</dimen>
-    <dimen name="button_size">16sp</dimen>
+    <!--  Size for both height & width-->
+    <dimen name="size_10dp">10dp</dimen>
+
+    <!--  Margin-->
+    <dimen name="margin_30dp">30dp</dimen>
+
+    <!--  Edit Text Size-->
+    <dimen name="edt_txt_size_16sp">16sp</dimen>
+
+    <!--  Button Size-->
+    <dimen name="btn_txt_size_16sp">16sp</dimen>
 </resources>

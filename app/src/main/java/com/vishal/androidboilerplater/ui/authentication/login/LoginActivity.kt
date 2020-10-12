@@ -1,12 +1,13 @@
-package com.vishal.androidboilerplater.ui.login
+package com.vishal.androidboilerplater.ui.authentication.login
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.vishal.androidboilerplater.R
-import com.vishal.androidboilerplater.data.ApiResult
 import com.vishal.androidboilerplater.databinding.ActivityLoginBinding
 import com.vishal.androidboilerplater.ui.base.BaseActivity
+import com.vishal.androidboilerplater.ui.home.HomeActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -21,12 +22,13 @@ class LoginActivity : BaseActivity() {
     }
 
     private fun observeViewModel() {
-        viewModel.loginResult.observe(this, { result ->
-            if (result is ApiResult.Success) {
-                showSnackBar(result.data.ip)
-            } else if (result is ApiResult.Faliour) {
-                showSnackBar(result.exception.message.toString())
-            }
+        viewModel.loginResult.observe(this, { _ ->
+            startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+//            if (result is ApiResult.Success) {
+//                showSnackBar(result.data.ip)
+//            } else if (result is ApiResult.Faliour) {
+//                showSnackBar(result.exception.message.toString())
+//            }
         })
     }
 

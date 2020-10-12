@@ -1,7 +1,7 @@
 package com.vishal.androidboilerplater.data.remote
 
 import com.vishal.androidboilerplater.data.model.Model
-import com.vishal.androidboilerplater.ui.login.model.LoginResult
+import com.vishal.androidboilerplater.ui.authentication.login.model.LoginResult
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Url

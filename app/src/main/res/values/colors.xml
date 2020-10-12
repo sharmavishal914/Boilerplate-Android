@@ -3,5 +3,10 @@
     <color name="colorPrimary">#009688</color>
     <color name="colorPrimaryDark">#00786D</color>
     <color name="colorAccent">#009688</color>
-    <color name="progress_background">#66ffffff</color>
+    <color name="progressBackground">#66ffffff</color>
+
+    <color name="textColorPrimary">#ffffff</color>
+    <color name="editTextColorPrimary">#000000</color>
+    <color name="btnBackgroundPrimary">@color/colorPrimary</color>
+
 </resources>
